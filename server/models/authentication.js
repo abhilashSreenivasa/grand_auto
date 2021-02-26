@@ -3,14 +3,16 @@ const authenticationSchema=new mongoose.Schema({
     uname:{
         type:String,
         require:true
+        
     },
     email:{
         type:String,
-        require:true
+        require:true,
+        unique:true
     },
     password:{
         type:String,
         require:true
     }
 })
-module.exports=mongoose.model('Register',authenticationSchema)
+module.exports=mongoose.model('RegisterUser',authenticationSchema)
